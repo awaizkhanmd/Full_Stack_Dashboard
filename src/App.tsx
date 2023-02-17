@@ -115,30 +115,34 @@ function App() {
           resources={[
             {
               name: "properties",
-              list:MuiInferencer,
+              list: AllProperties,
+              show: PropertyDetails,
+              create: CreateProperty,
+              edit: EditProperty,
               icon: <VillaOutlined />,
-          },
-          {
+            },
+            {
               name: "agents",
-              list:MuiInferencer,
+              list: Agents,
+              show: AgentProfile,
               icon: <PeopleAltOutlined />,
-          },
-          {
+            },
+            {
               name: "reviews",
-              list:MuiInferencer,
-            
+              list: Home,
               icon: <StarOutlineRounded />,
-          },
-          {
+            },
+            {
               name: "messages",
-              list:MuiInferencer,
+              list: Home,
               icon: <ChatBubbleOutline />,
-          },
-          {
+            },
+            {
               name: "my-profile",
-              list:MuiInferencer,
+              options: { label: "My Profile " },
+              list: MyProfile,
               icon: <AccountCircleOutlined />,
-          },
+            },
           ]}
           Title={Title}
           Sider={Sider}
@@ -148,7 +152,6 @@ function App() {
           authProvider={authProvider}
           LoginPage={Login}
           DashboardPage={Home}
-          
         />
       </RefineSnackbarProvider>
     </ColorModeContextProvider>
