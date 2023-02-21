@@ -1,9 +1,10 @@
-import React from 'react'
+import { useState } from "react"
 
-const agent = () => {
+const Agent = () => {
+  const [state, setState] = useState({ format: "MM/DD/YYYY" })
   return (
-    <div>agent</div>
+    <div>afhdfhgent</div>
   )
 }
 
-export default agent
+export default Agent
